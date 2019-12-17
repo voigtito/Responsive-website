@@ -1,0 +1,167 @@
+/* Global View aka Desktop View */
+
+body {
+    font-family: 'Asap', sans-serif;
+    color: white;
+    background-color: #EBEBEB;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    min-height: 500px;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    /* display para as col feitas, pai delas, portanto aplicam-se a todas */
+    flex-wrap: wrap;
+    /* flex wrap para nao acumular todos os itens em uma linha */
+    justify-content: space-between;
+    /* usado para o header fixo */
+    padding-top: 140px;
+}
+
+.header-container {
+    background-color: rgb(60, 60, 60);
+    min-height: 100px;
+    /* fixar posicao quando faz o scroll */
+    position: fixed;
+    width: 100%;
+}
+
+header {
+    max-width: 1024px;
+    /* background-color: blueviolet; somente utilizada para visualizacao no dev*/
+    min-height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*  */
+.col {
+    width: 30%;
+    /* o bom de utilizar % pois acaba sendo mais responsivo */
+    margin-bottom: 40px;
+    background-color: rgb(43, 226, 147);
+}
+
+.col p {
+    /* fonte * 0.0625 */
+    font-size: 0.825rem;
+    padding: 20px 25px;
+    /* mudar a altura das linhas */
+    line-height: 1.25rem;
+}  
+
+/* para esconder do desktop, para aparecer novamente em outro setor, deve ser ativado como block */
+.hide-desktop-only {
+    display: none;
+}
+
+.col img {
+
+    width: 100%;
+    height: auto;
+} 
+
+.col p::first-line {
+    /* primeira linha fica com as letras maiores first line */
+    font-weight: 700;
+}
+
+.mybutton {
+    padding: 10px 25px;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 20px;
+}
+
+
+.highlight {
+    font-weight: 700;
+}
+
+.mob-wrapper {
+    display: none;
+}
+
+/* Tablet View */
+@media (max-width: 768px){
+    
+.col {
+    width: 45%;
+}
+
+/* aqui esta ativando novamente para tablet */
+.hide-desktop-only {
+    display: block;
+}
+
+
+header {
+    display: block;
+    text-align: center;
+}
+
+.header-container {
+     position: relative;
+ }
+
+ .container {
+     padding-top: 40px;
+ }
+
+nav a {
+    display: block;
+}
+
+.logo {
+    padding: 40px 0;
+}
+
+.mybutton {
+    margin-left: 0;
+}
+
+/* CÓDIGO ABAIXO ESTÁ EM EXECUÇÃO, BURGUER MENU */
+
+/* .mob-wrapper {
+    display: block;
+    padding-right: 30px;
+}
+
+.mob-nav {
+    display: none;
+    position: absolute;
+    padding-top: 10px;
+}
+
+.navbutton {
+    display: block;
+    background-color: coral;
+    padding: 15px 30px;
+    margin-left: -70px;
+    text-align: center;
+} */
+
+}
+
+/* Mobile View */
+@media (max-width: 400px){
+    
+    .col {
+        width: 100%;
+    } 
+/* esconder box no mobile */
+    .hide-mobile {
+        display: none;
+   }
+
+   
+}
+
